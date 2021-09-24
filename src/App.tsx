@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { TextInput } from "./components/reusable/TextInput";
+import heroImage from "./assets/hero-image.jpg";
+import background from "./assets/background.jpg";
+import { NavigationBar } from "./components/NavigationBar";
+import { Form } from "./components/Form";
+
+const MainContainer = styled.div``;
+
+const HeroImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const HeroImage = styled.img`
+  max-height: 100%;
+  max-width: 100%;
+`;
 
 function App() {
+  const [address, setAddress] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <NavigationBar />
+      <HeroImageContainer>
+        <HeroImage src={heroImage} alt={"hero image"} />
+      </HeroImageContainer>
+      <Form />
+      <HeroImage src={background} alt={"background image"} />
+    </MainContainer>
   );
 }
 
