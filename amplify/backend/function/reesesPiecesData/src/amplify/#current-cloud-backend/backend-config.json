@@ -1,9 +1,0 @@
-{
-  "function": {
-    "reesesPiecesData": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  }
-}
