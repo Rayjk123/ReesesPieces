@@ -10,6 +10,14 @@
       "StackName": "amplify-reesespieces-dev-205549",
       "StackId": "arn:aws:cloudformation:us-east-1:609025520941:stack/amplify-reesespieces-dev-205549/fc97faf0-2576-11ec-b10b-0e62b5329e35",
       "AmplifyAppId": "d1ge3xcnpwplc9"
+    },
+    "categories": {
+      "function": {
+        "reesesPiecesData": {
+          "deploymentBucketName": "amplify-reesespieces-dev-205549-deployment",
+          "s3Key": "amplify-builds/reesesPiecesData-544b69514e6335722f37-build.zip"
+        }
+      }
     }
   }
 }
