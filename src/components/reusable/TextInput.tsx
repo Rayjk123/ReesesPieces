@@ -9,7 +9,7 @@ const InputSection = styled.div`
 
 const Input = styled.input`
   margin-left: 8px;
-  border-radius: 20px;
+  border-radius: 4px;
 `;
 
 export interface TextInputProps {

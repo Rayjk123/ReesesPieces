@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TextInput } from "./reusable/TextInput";
+import { generateData } from "../server/DataService";
 
 const FormContainer = styled.div`
   padding: 30px 0 30px 0;
@@ -14,15 +15,25 @@ const FormRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 16px;
 `;
 
 const FormRowContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1em;
+  margin-bottom: 8px;
 `;
 
-const FormSubmit = styled.button``;
+const FormSubmit = styled.a`
+  margin: 16px;
+  background-color: transparent;
+  padding: 8px 0 8px 0;
+  font-size: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #272522;
+  text-align: center;
+`;
 
 export const Form = () => {
   const [address, setAddress] = useState("");
@@ -39,7 +50,9 @@ export const Form = () => {
           <label>Primary Address</label>
           <TextInput value={address} onChange={(value) => setAddress(value)} />
         </FormRow>
-        <FormSubmit>Generate</FormSubmit>
+        <FormSubmit onClick={() => generateData({ address })}>
+          Generate
+        </FormSubmit>
         {/*<FormRow>*/}
         {/*  <label>hidweknfkaelrgneagnrek</label>*/}
         {/*  <TextInput value={address} onChange={(value) => setAddress(value)} />*/}
